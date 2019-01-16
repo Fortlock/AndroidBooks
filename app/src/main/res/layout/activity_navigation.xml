@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NavigationActivity">
+
+    <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:background="?android:attr/windowBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation"/>
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/navigation"
+            android:id="@+id/scrollView2" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/labelBName">
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:id="@+id/items_view"/>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+            android:src="@android:drawable/ic_input_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" android:id="@+id/addButton"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollView2" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/scrollView2" app:backgroundTint="@color/colorPrimary"/>
+    <TextView
+            android:text="Название:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelBName" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:textSize="24sp"
+            android:textStyle="bold"/>
+    <TextView
+            android:text="Автор:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelAuthor" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:textSize="24sp"
+            android:textStyle="bold" android:textAlignment="viewEnd"/>
+    <TextView
+            android:text="Имя:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelAName" app:layout_constraintEnd_toEndOf="@+id/labelAuthor"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            android:textSize="24sp" android:textStyle="bold"/>
+
+</android.support.constraint.ConstraintLayout>

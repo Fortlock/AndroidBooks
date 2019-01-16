@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Books</string>
+    <string name="title_activity_navigation">My books</string>
+    <string name="title_books">Books</string>
+    <string name="title_authors">Authors</string>
+    <string name="title_random">Random books</string>
+</resources>
